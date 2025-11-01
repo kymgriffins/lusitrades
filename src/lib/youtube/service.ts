@@ -1,4 +1,5 @@
 import { google } from 'googleapis';
+import { siteConfig } from '../config';
 
 const youtube = google.youtube({
   version: 'v3',
@@ -37,7 +38,7 @@ export interface ChannelStats {
 }
 
 // Get channel information
-export async function getChannelInfo(channelId: string = '@lordeofmerchants001'): Promise<YouTubeChannel | null> {
+export async function getChannelInfo(channelId: string = siteConfig.youtube.channelHandle): Promise<YouTubeChannel | null> {
   try {
     console.log('Fetching channel info for:', channelId);
 
@@ -89,7 +90,7 @@ export async function getChannelInfo(channelId: string = '@lordeofmerchants001')
 }
 
 // Get channel videos
-export async function getChannelVideos(channelId: string = '@lordeofmerchants001', maxResults: number = 50): Promise<YouTubeVideo[]> {
+export async function getChannelVideos(channelId: string = siteConfig.youtube.channelHandle, maxResults: number = 50): Promise<YouTubeVideo[]> {
   try {
     console.log('Fetching videos for channel:', channelId);
 

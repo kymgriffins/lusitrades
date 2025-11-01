@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getChannelInfo } from '@/lib/youtube/service';
+import { siteConfig } from '@/lib/config';
 
 export async function GET(request: NextRequest) {
   try {
     console.log('Channel API called');
     const { searchParams } = new URL(request.url);
-    const channelId = searchParams.get('channelId') || 'UC-lordeofmerchants001';
+    const channelId = searchParams.get('channelId') || siteConfig.youtube.channelHandle;
     console.log('Channel ID:', channelId);
 
     const channelInfo = await getChannelInfo(channelId);
