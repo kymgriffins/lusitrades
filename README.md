@@ -1,6 +1,6 @@
-# Lorde Merchant - YouTube Portfolio
+# Hemstone Lusi - YouTube Portfolio
 
-A professional YouTube portfolio website for Lorde Merchant, showcasing trading insights, market analysis, and educational content. Built with Next.js 16, React 19, TypeScript, and advanced UI components.
+A professional YouTube portfolio website for Hemstone Lusi, showcasing trading insights, market analysis, and educational content. Built with Next.js 16, React 19, TypeScript, and advanced UI components.
 
 ## 🚀 Features
 
@@ -14,10 +14,10 @@ A professional YouTube portfolio website for Lorde Merchant, showcasing trading 
 
 ## 📊 Channel Overview
 
-- **45.2K+ Subscribers**
-- **2.8M+ Total Views**
-- **156 Videos** published
-- **8.7% Average Engagement Rate**
+- **35+ Subscribers**
+- **6.8K+ Total Views**
+- **101 Videos** published
+- **Professional Trading Content**
 
 ## 🏗️ Project Structure
 
@@ -240,11 +240,11 @@ Compatible with:
 
 ## 📄 License
 
-This project is built for Lorde Merchant's YouTube portfolio. All rights reserved.
+This project is built for Hemstone Lusi's YouTube portfolio. All rights reserved.
 
 ## 🙏 Acknowledgments
 
-- **Lorde Merchant** - Trading expertise and content
+- **Hemstone Lusi** - Trading expertise and content
 - **shadcn/ui** - Amazing component library
 - **Next.js team** - Excellent framework
 - **Tailwind CSS** - Utility-first styling approach
@@ -252,5 +252,5 @@ This project is built for Lorde Merchant's YouTube portfolio. All rights reserve
 ---
 
 Built with ❤️ for professional YouTube content creators
-"# lordeofmerchants" 
-"# lusitrades" 
+"# lordeofmerchants"
+"# lusitrades"

@@ -8,8 +8,8 @@ export const siteConfig = {
 
   // Site Branding
   branding: {
-    name: 'Lusi Trades',
-    title: 'Lusi Trades - YouTube Portfolio',
+    name: 'Hemstone Lusi',
+    title: 'Hemstone Lusi - YouTube Portfolio',
     description: 'Professional YouTube portfolio showcasing trading insights, market analysis, and educational content',
     tagline: 'Professional trading insights and market analysis',
     keywords: ['youtube', 'trading', 'portfolio', 'market analysis', 'financial education'],
@@ -17,7 +17,7 @@ export const siteConfig = {
 
   // Content Creator Profile
   profile: {
-    displayName: 'Lusi Trades',
+    displayName: 'Hemstone Lusi',
     bio: 'Experienced trader and market analyst with deep knowledge in financial markets. Specializing in technical analysis, risk management, and educational content for aspiring traders. Focus on data-driven strategies and market psychology.',
     expertise: [
       'Technical Analysis',
