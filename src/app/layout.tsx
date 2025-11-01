@@ -15,12 +15,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lorde Merchant - YouTube Portfolio",
+  title: "Hemstone Lusi - YouTube Portfolio",
   description: "Professional YouTube portfolio showcasing trading insights, market analysis, and educational content",
   keywords: ["youtube", "trading", "portfolio", "market analysis", "financial education"],
-  authors: [{ name: "Lorde Merchant" }],
-  creator: "Lorde Merchant",
-  publisher: "Lorde Merchant",
+  authors: [{ name: "Hemstone Lusi" }],
+  creator: "Hemstone Lusi",
+  publisher: "Hemstone Lusi",
   formatDetection: {
     email: false,
     address: false,
