@@ -253,3 +253,4 @@ This project is built for Lorde Merchant's YouTube portfolio. All rights reserve
 
 Built with ❤️ for professional YouTube content creators
 "# lordeofmerchants" 
+"# lusitrades" 
