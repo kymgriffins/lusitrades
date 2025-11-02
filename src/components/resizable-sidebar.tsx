@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ThemeToggle } from "@/components/theme-toggle";
+import { siteConfig } from "@/lib/config";
 import {
   Home,
   Package,
@@ -137,7 +138,7 @@ export default function ResizableSidebar({ user }: ResizableSidebarProps) {
           <div className="p-4 border-b border-white/10 flex items-center justify-between">
             {!isCollapsed && (
               <div>
-                <h2 className="text-lg font-bold text-foreground">Lusi Trades</h2>
+                <h2 className="text-lg font-bold text-foreground">{siteConfig.branding.name}</h2>
                 <p className="text-xs text-muted-foreground">YouTube Portfolio</p>
               </div>
             )}

@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { getChannelInfo, getChannelVideos, formatNumber, formatPublishedDate, YouTubeChannel, YouTubeVideo } from "@/lib/youtube/service";
+import { siteConfig } from "@/lib/config";
 import { Activity, Eye, Play, Users, Youtube } from "lucide-react";
 
 export default async function DashboardPage() {
@@ -41,9 +42,9 @@ export default async function DashboardPage() {
     <div className="p-6 space-y-6">
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-foreground">{channelInfo?.title || 'Lorde Merchant'}</h1>
+          <h1 className="text-3xl font-bold text-foreground">{channelInfo?.title || siteConfig.branding.name}</h1>
           <p className="text-muted-foreground">
-            Professional YouTube Portfolio & Trading Insights
+            {siteConfig.branding.tagline}
           </p>
         </div>
         <Button>
@@ -111,27 +112,25 @@ export default async function DashboardPage() {
       {/* Featured Content */}
       <Card>
         <CardHeader>
-          <CardTitle>About {channelInfo?.title || 'Lorde Merchant'}</CardTitle>
+          <CardTitle>About {channelInfo?.title || siteConfig.branding.name}</CardTitle>
           <CardDescription>
-            Professional trader and market analyst sharing insights and strategies
+            {siteConfig.profile.bio}
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="flex items-start space-x-4">
             <Avatar className="w-16 h-16">
               <AvatarImage src={channelInfo?.thumbnail} alt={channelInfo?.title} />
-              <AvatarFallback>LM</AvatarFallback>
+              <AvatarFallback>{siteConfig.branding.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
             </Avatar>
             <div className="flex-1 space-y-2">
               <p className="text-sm text-muted-foreground">
-                {channelInfo?.description || 'Experienced trader with deep knowledge in financial markets. Specializing in technical analysis, risk management, and educational content for aspiring traders. Focus on data-driven strategies and market psychology.'}
+                {channelInfo?.description || siteConfig.profile.bio}
               </p>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="outline">Technical Analysis</Badge>
-                <Badge variant="outline">Risk Management</Badge>
-                <Badge variant="outline">Market Psychology</Badge>
-                <Badge variant="outline">Educational Content</Badge>
-                <Badge variant="outline">Trading Strategies</Badge>
+                {siteConfig.profile.expertise.map((skill) => (
+                  <Badge key={skill} variant="outline">{skill}</Badge>
+                ))}
               </div>
             </div>
           </div>

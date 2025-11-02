@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { Geist, Geist_Mono } from "next/font/google";
+import { siteConfig } from "@/lib/config";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,12 +16,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hemstone Lusi - YouTube Portfolio",
-  description: "Professional YouTube portfolio showcasing trading insights, market analysis, and educational content",
-  keywords: ["youtube", "trading", "portfolio", "market analysis", "financial education"],
-  authors: [{ name: "Hemstone Lusi" }],
-  creator: "Hemstone Lusi",
-  publisher: "Hemstone Lusi",
+  title: siteConfig.branding.title,
+  description: siteConfig.branding.description,
+  keywords: siteConfig.branding.keywords,
+  authors: [{ name: siteConfig.branding.name }],
+  creator: siteConfig.branding.name,
+  publisher: siteConfig.branding.name,
   formatDetection: {
     email: false,
     address: false,

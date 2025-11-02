@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getChannelInfo, getChannelVideos } from '@/lib/youtube/service';
+import { siteConfig } from '@/lib/config';
 
 interface AnalyticsData {
   overview: {
@@ -77,7 +78,7 @@ export async function GET(request: NextRequest) {
   try {
     console.log('Analytics API called');
     const { searchParams } = new URL(request.url);
-    const channelId = searchParams.get('channelId') || '@lordeofmerchants001';
+    const channelId = searchParams.get('channelId') || siteConfig.youtube.channelHandle;
     const period = searchParams.get('period') || '30days'; // 7days, 30days, 90days, 1year
 
     console.log('Channel ID:', channelId, 'Period:', period);

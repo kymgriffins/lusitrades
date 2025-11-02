@@ -172,11 +172,21 @@ export async function getChannelVideos(channelId: string = siteConfig.youtube.ch
 }
 
 // Get channel statistics
-export async function getChannelStats(channelId: string = 'UC-lordeofmerchants001'): Promise<ChannelStats | null> {
+export async function getChannelStats(channelId: string = siteConfig.youtube.channelHandle): Promise<ChannelStats | null> {
   try {
+    // If it's a handle (starts with @), get the channel info first to get the actual channel ID
+    let actualChannelId = channelId;
+    if (channelId.startsWith('@')) {
+      const channelInfo = await getChannelInfo(channelId);
+      if (!channelInfo) {
+        return null;
+      }
+      actualChannelId = channelInfo.id;
+    }
+
     const response = await youtube.channels.list({
       part: ['statistics'],
-      id: [channelId],
+      id: [actualChannelId],
     });
 
     if (!response.data.items || response.data.items.length === 0) {
